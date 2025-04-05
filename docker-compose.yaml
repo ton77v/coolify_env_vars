@@ -3,8 +3,11 @@ services:
       build:
         context: .
         args:
+          # SYNTAX LIKE "NAME": "VALUE" FOR BUILD ARGS | ENV VARS WORKS POORLY | NAME=VALUE MOSTLY WORKS
           - SMTH=123
+          # DOMAIN_NAME won't be set, while COOLIFY_FQDN is
           - DOMAIN_NAME=${COOLIFY_FQDN}
       environment:
+        # interestingly, COMMIT_SHA works fine but not the DEPLOYMENT_URL while COOLIFY_URL works
         - COMMIT_SHA=${SOURCE_COMMIT}
         - DEPLOYMENT_URL=${COOLIFY_URL}
