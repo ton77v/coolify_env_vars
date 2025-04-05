@@ -2,7 +2,6 @@ services:
     app:
         build: .
         environment:
-          COMMIT_SHA: ${SOURCE_COMMIT}
-          DOMAIN_NAME: ${COOLIFY_URL}
-          DOMAIN_ALT: ${COOLIFY_FQDN}
-          HELLO: "WORD"
+          - COMMIT_SHA=${SOURCE_COMMIT}
+          - DOMAIN_NAME=${COOLIFY_URL}
+          - COOLIFY_FQDN
