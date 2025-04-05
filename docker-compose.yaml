@@ -4,6 +4,7 @@ services:
         context: .
         args:
           - SMTH=123
+          - DOMAIN_NAME=${COOLIFY_FQDN}
       environment:
         - COMMIT_SHA=${SOURCE_COMMIT}
-        - DOMAIN_NAME=${COOLIFY_URL}
+        - DEPLOYMENT_URL=${COOLIFY_URL}
