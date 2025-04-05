@@ -1,0 +1,1 @@
+# coolify_env_vars
