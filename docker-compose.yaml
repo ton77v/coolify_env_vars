@@ -1,7 +1,9 @@
 services:
     app:
-        build: .
-        environment:
-          - COMMIT_SHA=${SOURCE_COMMIT}
-          - DOMAIN_NAME=${COOLIFY_URL}
-          - COOLIFY_FQDN
+      build:
+        context: .
+        args:
+          - SMTH=123
+      environment:
+        - COMMIT_SHA=${SOURCE_COMMIT}
+        - DOMAIN_NAME=${COOLIFY_URL}
